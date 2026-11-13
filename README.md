@@ -1,16 +1,26 @@
-# Introduction to GitHub
+# Reifebuch Uebungsprojekt
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+Lokale Demo für Software Engineering I, Übung 2.1/3 und 2.2/3-4.
+Die API liefert synthetische Daten. Fachliche Funktionen des Teamprojekts
+werden in den UML-Modellen beschrieben.
 
-Hey hyeon0118!
+## Start
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+JDK 21 und Maven 3.9 verwenden.
 
-Remember, it's self-paced so feel free to take a break! ☕️
+```bash
+mvn clean compile
+mvn exec:java
+```
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/hyeon0118/reifebuch-uebung/issues/1)
+GET http://127.0.0.1:8080/api/chargen liefert eine JSON-Liste.
+Mit Strg+C beenden.
 
----
+## Abhängigkeiten und SBOM
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+```bash
+mvn dependency:tree
+mvn cyclonedx:makeAggregateBom
+```
 
+Die SBOM steht in target/bom.json.
