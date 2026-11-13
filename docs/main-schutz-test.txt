@@ -1,0 +1,1 @@
+Test: Änderungen an main müssen über einen Pull Request erfolgen.
